@@ -1,13 +1,17 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-
+  res
+    .status(400)
+    .json({ message: 'This will be the homepage' });
 });
 
 router.get('/post/:id', withAuth, async (req, res) => {
-
+  res
+    .status(400)
+    .json({ message: 'This will a selected user post page' });
 });
 
 router.get('/login', (req, res) => {
